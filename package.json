@@ -1,0 +1,20 @@
+{
+  "name": "Random_Numbers",
+  "version": "0.1.0",
+  "description": "random number generator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux" : "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release-builds",
+    "setup": "electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "author": "MrGentleDolphin",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "electron-packager": "^9.1.0"
+  }
+}

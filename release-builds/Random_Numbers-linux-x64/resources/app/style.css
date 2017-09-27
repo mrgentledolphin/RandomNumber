@@ -1,0 +1,60 @@
+body{
+	background-color: #181919;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+.sidebar{
+	background-color: #111111;
+	height: 100vh;
+	float: left;
+}
+
+.mainWin{
+	float: left;
+}
+
+.audio{
+	width: 100%;
+
+}
+
+.hide{
+	display: none;
+}
+.number{
+	font-size: 7em;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+.links{
+	list-style-type: none;
+	margin-top: 30px;
+	width: 100%;
+	padding: 4px;
+}
+.links:hover{
+	background-color: #191919;
+	transition: 0.3s;
+}
+.list-item{
+	color: white;
+}
+.list-item:hover{
+	color: white;
+	text-decoration: none;
+}
+
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 0px); 
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	 <meta charset="UTF-8">
+	
+	 <script>window.$ = window.jQuery = require('./src/jquery-3.2.1.js');</script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	 <title>Hello World!</title>
+	 <link rel="stylesheet" type="text/css" href="style.css">
+	 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+	 <div class="col-md-2 sidebar">
+	 	<ul class="links">
+	 		<li class="link">
+	 			<a href="#" class="list-item">Random Number</a>
+	 		</li>
+	 	</ul>
+	 </div>
+	 <div class="col-md-10 mainWin">
+
+	 	<h1 class="text-center text-capitalize mt-3 mb-5">random number</h1>
+
+	 	<div class="col-auto">
+	 	      <label class="mr-sm-2" for="inlineFormCustomSelect">Scegli Canzone</label>
+	 	      <select class="custom-select mb-2 mr-sm-2 mb-sm-0 songSelect" id="inlineFormCustomSelect">
+	 	        <option selected>Scegli...</option>
+	 	        <option class="text-capitalize" value="1">the final countdown</option>
+	 	        <option class="text-capitalize" value="2">saw theme</option>
+	 	        <option class="text-capitalize" value="3">lo squalo</option>
+	 	        <option class="text-capitalize" value="4">introduction</option>
+	 	        <option class="text-capitalize" value="5">hearth of courage</option>
+	 	      </select>
+	 	      <button class="btn btn-primary" id="changeButton">Cambia</button>
+	 	</div>
+	 	<audio controls class="mt-5 audio" id="player">
+	 	  <source src="./songs/final_countdown.mp3" type="audio/mpeg" id="audioPlayer">
+	 		Your browser does not support the audio element.
+	 	</audio>
+
+	 	<div class="col-md-4 mt-5">
+	 		<form class="form-group">
+	 			<label>Da:</label>
+	 			<input type="number" class="form-control" min="0" id="randomFrom">
+	 			<label>A:</label>
+	 			<input type="number" class="form-control" min="0" id="randomTo">
+
+	 			<a href="#" class="btn btn-primary mt-4 randomize">Randomize!</a>
+	 		</form>
+	 	</div>
+	 	<h1 class="text-center mt-5 hide" id="testoFort">Il numero fortunato è</h1>
+	 	<h1 class="text-center mt-5 number"></h1>
+	 </div>
+
+
+  </body>
+
+  <script>
+	 // You can also require other files to run in this process
+	 require('./renderer.js')
+  </script>
+  <script src="js.js"></script>
+</html>
